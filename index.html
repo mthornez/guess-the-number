@@ -1,5 +1,33 @@
+<!DOCTYPE html>
 <html>
-  <body>
-    <h1>Guess the number!</h1>
-  </body>
+<head>
+</head>
+<body>
+	<script>
+        let num = Math.floor(Math.random() * 100) + 1;
+        let guess = prompt("Guess a number between 1 and 100.");
+        let gotIt = false; 
+        let numGuesses = 0;
+
+        while(gotIt === false){
+
+            numGuesses++;
+
+            if(num == guess){
+                gotIt = true; //breaks out of loop!
+            }else{ //continue since answer is incorrect!
+
+                if(num > guess){ //higher!
+                    guess = prompt("Higher!");
+                }else{ //lower
+                    guess = prompt("Lower.");
+                }
+            }
+        }
+          alert("Got it! You guessed " + numGuesses + " times.");
+
+
+	</script>
+</body>
 </html>
+
